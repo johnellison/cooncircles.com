@@ -1,0 +1,48 @@
+@import '@fontsource/rubik';
+@import '@fontsource/fraunces';
+@import '@fontsource/fraunces/400.css';
+@import '@fontsource/fraunces/500.css';
+@import '@fontsource/fraunces/600.css';
+@import '@fontsource/fraunces/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 47% 94%;
+    --foreground: 34 35% 30%;
+    --card: 0 0% 100%;
+    --card-foreground: 34 35% 30%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 34 35% 30%;
+    --primary: 34 35% 30%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 114 29% 86%;
+    --secondary-foreground: 34 35% 30%;
+    --muted: 36 40% 92%;
+    --muted-foreground: 34 25% 40%;
+    --accent: 114 29% 86%;
+    --accent-foreground: 34 35% 30%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 34 20% 85%;
+    --input: 34 20% 85%;
+    --ring: 34 35% 30%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Rubik', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+  }
+}
