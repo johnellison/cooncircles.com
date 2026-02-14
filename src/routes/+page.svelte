@@ -27,15 +27,15 @@
 				<div class="flex flex-wrap gap-x-6 gap-y-3 mb-8">
 					<div class="flex items-center gap-2">
 						<svg class="h-5 w-5 text-earth-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21" />
+							<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
 						</svg>
-						<span class="text-sm text-foreground">Team retreats & offsites</span>
+						<span class="text-sm text-foreground">AI transformation</span>
 					</div>
 					<div class="flex items-center gap-2">
 						<svg class="h-5 w-5 text-earth-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+							<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21" />
 						</svg>
-						<span class="text-sm text-foreground">Community rituals</span>
+						<span class="text-sm text-foreground">Team retreats & offsites</span>
 					</div>
 					<div class="flex items-center gap-2">
 						<svg class="h-5 w-5 text-earth-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -48,6 +48,12 @@
 							<path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
 						</svg>
 						<span class="text-sm text-foreground">Leadership training</span>
+					</div>
+					<div class="flex items-center gap-2">
+						<svg class="h-5 w-5 text-earth-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+						</svg>
+						<span class="text-sm text-foreground">Community rituals</span>
 					</div>
 				</div>
 
@@ -87,14 +93,14 @@
 		</p>
 
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-			<!-- Card 1: Community Leaders -->
+			<!-- Card 1: Conscious Corporations -->
 			<Card class="overflow-hidden flex flex-col">
 				<CardContent class="pt-6 pb-4 flex-grow">
-					<h3 class="text-lg font-bold mb-3 text-foreground">Community Leaders & Faith Gatherings</h3>
-					<p class="text-sm text-muted-foreground leading-relaxed">Supporting local leaders — from social justice activists to faith leaders — in creating gatherings that unify, listen deeply, and restore harmony to the collective field.</p>
+					<h3 class="text-lg font-bold mb-3 text-foreground">Conscious Corporations</h3>
+					<p class="text-sm text-muted-foreground leading-relaxed">Working with purpose-driven organizations navigating AI transformation, change management, and ethical technology integration while maintaining human-centered values.</p>
 				</CardContent>
 				<div class="relative h-56">
-					<img src="/who-work-with-1.webp" alt="Community Leaders" class="w-full h-full object-cover" />
+					<img src="/who-work-with-4.webp" alt="Conscious Corporations" class="w-full h-full object-cover" />
 				</div>
 			</Card>
 
@@ -120,14 +126,14 @@
 				</div>
 			</Card>
 
-			<!-- Card 4: Social Entrepreneurs -->
+			<!-- Card 4: Community Leaders -->
 			<Card class="overflow-hidden flex flex-col">
 				<CardContent class="pt-6 pb-4 flex-grow">
-					<h3 class="text-lg font-bold mb-3 text-foreground">Social Entrepreneurs & Family Businesses</h3>
-					<p class="text-sm text-muted-foreground leading-relaxed">Holding space for clarity, renewal, and emotional resilience within purpose-driven missions and regenerative organizations.</p>
+					<h3 class="text-lg font-bold mb-3 text-foreground">Community Leaders & Faith Gatherings</h3>
+					<p class="text-sm text-muted-foreground leading-relaxed">Supporting local leaders — from social justice activists to faith leaders — in creating gatherings that unify, listen deeply, and restore harmony to the collective field.</p>
 				</CardContent>
 				<div class="relative h-56">
-					<img src="/who-work-with-4.webp" alt="Social Entrepreneurs" class="w-full h-full object-cover" />
+					<img src="/who-work-with-1.webp" alt="Community Leaders" class="w-full h-full object-cover" />
 				</div>
 			</Card>
 		</div>
@@ -282,73 +288,73 @@
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			<AnimateOnScroll delay={0}>
-				<CardPremium class="overflow-hidden">
+				<CardPremium class="overflow-hidden min-h-[550px] flex flex-col">
 					<div class="relative aspect-[4/3]">
 						<img src="/service-speaking.jpg" alt="Workshops" class="w-full h-full object-cover" />
 					</div>
-					<CardContent class="p-8">
+					<CardContent class="p-8 flex-grow flex flex-col">
 						<h3 class="text-xl font-bold mb-2 text-foreground">Workshops & Training</h3>
-						<p class="text-muted-foreground text-sm min-h-[4rem]">Interactive workshops and individual leadership coaching and group training designed to inspire growth, foster collaboration, and ignite collective action.</p>
+						<p class="text-muted-foreground text-sm">Interactive workshops and individual leadership coaching and group training designed to inspire growth, foster collaboration, and ignite collective action.</p>
 					</CardContent>
 				</CardPremium>
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={0.15}>
-				<CardPremium class="overflow-hidden">
+				<CardPremium class="overflow-hidden min-h-[550px] flex flex-col">
 					<div class="relative aspect-[4/3]">
 						<img src="/service-teambuilding.jpg" alt="Retreats" class="w-full h-full object-cover" />
 					</div>
-					<CardContent class="p-8">
+					<CardContent class="p-8 flex-grow flex flex-col">
 						<h3 class="text-xl font-bold mb-2 text-foreground">Leadership Retreats + Offsites</h3>
-						<p class="text-muted-foreground text-sm min-h-[4rem]">Custom-designed retreats and offsites to help your team reconnect, reflect, and realign with purpose in inspiring settings.</p>
+						<p class="text-muted-foreground text-sm">Custom-designed retreats and offsites to help your team reconnect, reflect, and realign with purpose in inspiring settings.</p>
 					</CardContent>
 				</CardPremium>
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={0.3}>
-				<CardPremium class="overflow-hidden">
+				<CardPremium class="overflow-hidden min-h-[550px] flex flex-col">
 					<div class="relative aspect-[4/3]">
 						<img src="/service-coaching.jpg" alt="Conflict" class="w-full h-full object-cover" />
 					</div>
-					<CardContent class="p-8">
+					<CardContent class="p-8 flex-grow flex flex-col">
 						<h3 class="text-xl font-bold mb-2 text-foreground">Conflict Transformation</h3>
-						<p class="text-muted-foreground text-sm min-h-[4rem]">Compassionate facilitation for navigating conflict, restoring harmony, and building stronger, more resilient communities and organizations.</p>
+						<p class="text-muted-foreground text-sm">Compassionate facilitation for navigating conflict, restoring harmony, and building stronger, more resilient communities and organizations.</p>
 					</CardContent>
 				</CardPremium>
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={0.45}>
-				<CardPremium class="overflow-hidden">
+				<CardPremium class="overflow-hidden min-h-[550px] flex flex-col">
 					<div class="relative aspect-[4/3]">
 						<img src="/service-paired.jpg" alt="Rituals" class="w-full h-full object-cover" />
 					</div>
-					<CardContent class="p-8">
+					<CardContent class="p-8 flex-grow flex flex-col">
 						<h3 class="text-xl font-bold mb-2 text-foreground">Community & Team Rituals</h3>
-						<p class="text-muted-foreground text-sm min-h-[4rem]">Guided community & team listening and rituals that foster understanding, trust, and a sense of belonging for all group members.</p>
+						<p class="text-muted-foreground text-sm">Guided community & team listening and rituals that foster understanding, trust, and a sense of belonging for all group members.</p>
 					</CardContent>
 				</CardPremium>
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={0.6}>
-				<CardPremium class="overflow-hidden">
+				<CardPremium class="overflow-hidden min-h-[550px] flex flex-col">
 					<div class="relative aspect-[4/3]">
 						<img src="/service-experience.jpg" alt="Sprouts" class="w-full h-full object-cover" />
 					</div>
-					<CardContent class="p-8">
+					<CardContent class="p-8 flex-grow flex flex-col">
 						<h3 class="text-xl font-bold mb-2 text-foreground">Community & Team Sprouts</h3>
-						<p class="text-muted-foreground text-sm min-h-[4rem]">Thoughtful onboarding and welcoming new members with intention, planting seeds of trust and purpose so the project or community can root and come alive together.</p>
+						<p class="text-muted-foreground text-sm">Thoughtful onboarding and welcoming new members with intention, planting seeds of trust and purpose so the project or community can root and come alive together.</p>
 					</CardContent>
 				</CardPremium>
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={0.75}>
-				<CardPremium class="overflow-hidden">
+				<CardPremium class="overflow-hidden min-h-[550px] flex flex-col">
 					<div class="relative aspect-[4/3]">
 						<img src="/hero-workshop.jpg" alt="Circles" class="w-full h-full object-cover" />
 					</div>
-					<CardContent class="p-8">
+					<CardContent class="p-8 flex-grow flex flex-col">
 						<h3 class="text-xl font-bold mb-2 text-foreground">Circles of Transformation</h3>
-						<p class="text-muted-foreground text-sm min-h-[4rem]">Co-created retreats and journeys designed with trusted partners and open for individuals to self-register and step into their growth and transformation.</p>
+						<p class="text-muted-foreground text-sm">Co-created retreats and journeys designed with trusted partners and open for individuals to self-register and step into their growth and transformation.</p>
 					</CardContent>
 				</CardPremium>
 			</AnimateOnScroll>
