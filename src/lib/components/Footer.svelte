@@ -41,8 +41,8 @@
 				<h3 class="font-semibold mb-4 text-white">Connect</h3>
 				<ul class="space-y-3">
 					<li>
-						<a href="mailto:fatma.ghedira@gmail.com" class="text-sm text-white/70 hover:text-white transition-colors"
-							>fatma.ghedira@gmail.com</a
+						<a href="mailto:fatma@cooncircles.com" class="text-sm text-white/70 hover:text-white transition-colors"
+							>fatma@cooncircles.com</a
 						>
 					</li>
 					<li>

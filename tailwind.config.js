@@ -10,6 +10,10 @@ export default {
 			}
 		},
 		extend: {
+			backgroundImage: {
+				'multi-gradient': 'linear-gradient(135deg, #6DAAC9 0%, #765E85 50%, #BE5E4F 100%)',
+				'earth-soft': 'linear-gradient(to bottom, rgba(103, 80, 50, 0.08), transparent)',
+			},
 			colors: {
 				border: 'hsl(var(--border) / <alpha-value>)',
 				input: 'hsl(var(--input) / <alpha-value>)',

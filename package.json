@@ -27,6 +27,7 @@
 		"@fontsource/fraunces": "^5.2.9",
 		"@fontsource/rubik": "^5.2.8",
 		"clsx": "^2.1.1",
+		"svelte-motion": "^0.12.2",
 		"tailwind-merge": "^3.4.0"
 	}
 }

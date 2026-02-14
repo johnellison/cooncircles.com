@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
-	import { Card, CardContent, CardHeader } from '$lib/components/ui/card';
+	import { Card, CardContent, CardHeader, CardPremium } from '$lib/components/ui/card';
+	import AnimateOnScroll from '$lib/components/AnimateOnScroll.svelte';
 </script>
 
 <svelte:head>
@@ -9,7 +10,7 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="relative py-20 bg-background">
+<section class="relative py-32 bg-background">
 	<div class="container mx-auto px-4 md:px-6">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div class="relative order-2 lg:order-1">
@@ -78,7 +79,7 @@
 </section>
 
 <!-- Who I Work With -->
-<section class="py-20 bg-background">
+<section class="py-32 bg-background">
 	<div class="container mx-auto px-4 md:px-6">
 		<h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Who I Work With?</h2>
 		<p class="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
@@ -143,7 +144,7 @@
 </section>
 
 <!-- Why Leaders Are Being Called -->
-<section class="py-20 bg-card">
+<section class="py-32 bg-card">
 	<div class="container mx-auto px-4 md:px-6">
 		<h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Why Leaders Are Being Called to Go Deeper Now</h2>
 		<p class="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
@@ -151,59 +152,77 @@
 		</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-			<Card>
-				<CardHeader>
-					<h3 class="text-lg font-bold text-earth-primary">Cultivate inner safety</h3>
-				</CardHeader>
-				<CardContent>
-					<p class="text-sm text-muted-foreground">Building the internal foundation that allows for presence and clarity</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0}>
+				<Card class="overflow-hidden flex flex-col">
+					<CardContent class="pt-6 pb-4 flex-grow">
+						<h3 class="text-lg font-bold mb-3 text-earth-primary">Cultivate inner safety</h3>
+						<p class="text-sm text-muted-foreground leading-relaxed">Building the internal foundation that allows for presence and clarity</p>
+					</CardContent>
+					<div class="relative h-56">
+						<img src="/why-leaders-inner-safety.jpg" alt="Inner safety" class="w-full h-full object-cover" loading="lazy" />
+					</div>
+				</Card>
+			</AnimateOnScroll>
 
-			<Card>
-				<CardHeader>
-					<h3 class="text-lg font-bold text-fire">Confront shadow and bias</h3>
-				</CardHeader>
-				<CardContent>
-					<p class="text-sm text-muted-foreground">Looking honestly at what we've been avoiding or denying</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0.1}>
+				<Card class="overflow-hidden flex flex-col">
+					<CardContent class="pt-6 pb-4 flex-grow">
+						<h3 class="text-lg font-bold mb-3 text-fire">Confront shadow and bias</h3>
+						<p class="text-sm text-muted-foreground leading-relaxed">Looking honestly at what we've been avoiding or denying</p>
+					</CardContent>
+					<div class="relative h-56">
+						<img src="/why-leaders-shadow.jpg" alt="Shadow work" class="w-full h-full object-cover" loading="lazy" />
+					</div>
+				</Card>
+			</AnimateOnScroll>
 
-			<Card>
-				<CardHeader>
-					<h3 class="text-lg font-bold text-water">Transform relationships</h3>
-				</CardHeader>
-				<CardContent>
-					<p class="text-sm text-muted-foreground">Moving from transactional to truly relational leadership</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0.2}>
+				<Card class="overflow-hidden flex flex-col">
+					<CardContent class="pt-6 pb-4 flex-grow">
+						<h3 class="text-lg font-bold mb-3 text-water">Transform relationships</h3>
+						<p class="text-sm text-muted-foreground leading-relaxed">Moving from transactional to truly relational leadership</p>
+					</CardContent>
+					<div class="relative h-56">
+						<img src="/why-leaders-relationships.jpg" alt="Relational leadership" class="w-full h-full object-cover" loading="lazy" />
+					</div>
+				</Card>
+			</AnimateOnScroll>
 
-			<Card>
-				<CardHeader>
-					<h3 class="text-lg font-bold text-air">Design safe and brave spaces</h3>
-				</CardHeader>
-				<CardContent>
-					<p class="text-sm text-muted-foreground">Creating containers where truth can be spoken and heard</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0.3}>
+				<Card class="overflow-hidden flex flex-col">
+					<CardContent class="pt-6 pb-4 flex-grow">
+						<h3 class="text-lg font-bold mb-3 text-air">Design safe and brave spaces</h3>
+						<p class="text-sm text-muted-foreground leading-relaxed">Creating containers where truth can be spoken and heard</p>
+					</CardContent>
+					<div class="relative h-56">
+						<img src="/why-leaders-spaces.jpg" alt="Safe spaces" class="w-full h-full object-cover" loading="lazy" />
+					</div>
+				</Card>
+			</AnimateOnScroll>
 
-			<Card>
-				<CardHeader>
-					<h3 class="text-lg font-bold text-spirit">Integrate healing and leadership</h3>
-				</CardHeader>
-				<CardContent>
-					<p class="text-sm text-muted-foreground">Understanding that how we lead is inseparable from who we are</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0.4}>
+				<Card class="overflow-hidden flex flex-col">
+					<CardContent class="pt-6 pb-4 flex-grow">
+						<h3 class="text-lg font-bold mb-3 text-spirit">Integrate healing and leadership</h3>
+						<p class="text-sm text-muted-foreground leading-relaxed">Understanding that how we lead is inseparable from who we are</p>
+					</CardContent>
+					<div class="relative h-56">
+						<img src="/why-leaders-healing.jpg" alt="Healing integration" class="w-full h-full object-cover" loading="lazy" />
+					</div>
+				</Card>
+			</AnimateOnScroll>
 
-			<Card>
-				<CardHeader>
-					<h3 class="text-lg font-bold text-earth-extra">Model regenerative leadership</h3>
-				</CardHeader>
-				<CardContent>
-					<p class="text-sm text-muted-foreground">Leading in ways that restore rather than deplete</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0.5}>
+				<Card class="overflow-hidden flex flex-col">
+					<CardContent class="pt-6 pb-4 flex-grow">
+						<h3 class="text-lg font-bold mb-3 text-earth-extra">Model regenerative leadership</h3>
+						<p class="text-sm text-muted-foreground leading-relaxed">Leading in ways that restore rather than deplete</p>
+					</CardContent>
+					<div class="relative h-56">
+						<img src="/why-leaders-regenerative.jpg" alt="Regenerative leadership" class="w-full h-full object-cover" loading="lazy" />
+					</div>
+				</Card>
+			</AnimateOnScroll>
 		</div>
 
 		<div class="flex justify-center gap-4 mt-12">
@@ -218,7 +237,7 @@
 </section>
 
 <!-- Testimonials -->
-<section class="py-20 bg-background">
+<section class="py-32 bg-background">
 	<div class="container mx-auto px-4 md:px-6">
 		<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">Stories of Transformation</h2>
 
@@ -272,7 +291,7 @@
 </section>
 
 <!-- Services Preview -->
-<section class="py-20 bg-card">
+<section class="py-32 bg-card">
 	<div class="container mx-auto px-4 md:px-6">
 		<h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">My Services</h2>
 		<p class="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
@@ -280,65 +299,77 @@
 		</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-			<Card class="overflow-hidden">
-				<div class="relative h-48">
-					<img src="/service-speaking.jpg" alt="Workshops" class="w-full h-full object-cover" />
-				</div>
-				<CardContent class="pt-6">
-					<h3 class="text-xl font-bold mb-2 text-foreground">Workshops & Training</h3>
-					<p class="text-muted-foreground text-sm">Interactive workshops and individual leadership coaching and group training designed to inspire growth, foster collaboration, and ignite collective action.</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0}>
+				<CardPremium class="overflow-hidden">
+					<div class="relative aspect-[4/3]">
+						<img src="/service-speaking.jpg" alt="Workshops" class="w-full h-full object-cover" />
+					</div>
+					<CardContent class="p-8">
+						<h3 class="text-xl font-bold mb-2 text-foreground">Workshops & Training</h3>
+						<p class="text-muted-foreground text-sm min-h-[4rem]">Interactive workshops and individual leadership coaching and group training designed to inspire growth, foster collaboration, and ignite collective action.</p>
+					</CardContent>
+				</CardPremium>
+			</AnimateOnScroll>
 
-			<Card class="overflow-hidden">
-				<div class="relative h-48">
-					<img src="/service-teambuilding.jpg" alt="Retreats" class="w-full h-full object-cover" />
-				</div>
-				<CardContent class="pt-6">
-					<h3 class="text-xl font-bold mb-2 text-foreground">Leadership Retreats + Offsites</h3>
-					<p class="text-muted-foreground text-sm">Custom-designed retreats and offsites to help your team reconnect, reflect, and realign with purpose in inspiring settings.</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0.15}>
+				<CardPremium class="overflow-hidden">
+					<div class="relative aspect-[4/3]">
+						<img src="/service-teambuilding.jpg" alt="Retreats" class="w-full h-full object-cover" />
+					</div>
+					<CardContent class="p-8">
+						<h3 class="text-xl font-bold mb-2 text-foreground">Leadership Retreats + Offsites</h3>
+						<p class="text-muted-foreground text-sm min-h-[4rem]">Custom-designed retreats and offsites to help your team reconnect, reflect, and realign with purpose in inspiring settings.</p>
+					</CardContent>
+				</CardPremium>
+			</AnimateOnScroll>
 
-			<Card class="overflow-hidden">
-				<div class="relative h-48">
-					<img src="/service-coaching.jpg" alt="Conflict" class="w-full h-full object-cover" />
-				</div>
-				<CardContent class="pt-6">
-					<h3 class="text-xl font-bold mb-2 text-foreground">Conflict Transformation</h3>
-					<p class="text-muted-foreground text-sm">Compassionate facilitation for navigating conflict, restoring harmony, and building stronger, more resilient communities and organizations.</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0.3}>
+				<CardPremium class="overflow-hidden">
+					<div class="relative aspect-[4/3]">
+						<img src="/service-coaching.jpg" alt="Conflict" class="w-full h-full object-cover" />
+					</div>
+					<CardContent class="p-8">
+						<h3 class="text-xl font-bold mb-2 text-foreground">Conflict Transformation</h3>
+						<p class="text-muted-foreground text-sm min-h-[4rem]">Compassionate facilitation for navigating conflict, restoring harmony, and building stronger, more resilient communities and organizations.</p>
+					</CardContent>
+				</CardPremium>
+			</AnimateOnScroll>
 
-			<Card class="overflow-hidden">
-				<div class="relative h-48">
-					<img src="/service-paired.jpg" alt="Rituals" class="w-full h-full object-cover" />
-				</div>
-				<CardContent class="pt-6">
-					<h3 class="text-xl font-bold mb-2 text-foreground">Community & Team Rituals</h3>
-					<p class="text-muted-foreground text-sm">Guided community & team listening and rituals that foster understanding, trust, and a sense of belonging for all group members.</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0.45}>
+				<CardPremium class="overflow-hidden">
+					<div class="relative aspect-[4/3]">
+						<img src="/service-paired.jpg" alt="Rituals" class="w-full h-full object-cover" />
+					</div>
+					<CardContent class="p-8">
+						<h3 class="text-xl font-bold mb-2 text-foreground">Community & Team Rituals</h3>
+						<p class="text-muted-foreground text-sm min-h-[4rem]">Guided community & team listening and rituals that foster understanding, trust, and a sense of belonging for all group members.</p>
+					</CardContent>
+				</CardPremium>
+			</AnimateOnScroll>
 
-			<Card class="overflow-hidden">
-				<div class="relative h-48">
-					<img src="/service-experience.jpg" alt="Sprouts" class="w-full h-full object-cover" />
-				</div>
-				<CardContent class="pt-6">
-					<h3 class="text-xl font-bold mb-2 text-foreground">Community & Team Sprouts</h3>
-					<p class="text-muted-foreground text-sm">Thoughtful onboarding and welcoming new members with intention, planting seeds of trust and purpose so the project or community can root and come alive together.</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0.6}>
+				<CardPremium class="overflow-hidden">
+					<div class="relative aspect-[4/3]">
+						<img src="/service-experience.jpg" alt="Sprouts" class="w-full h-full object-cover" />
+					</div>
+					<CardContent class="p-8">
+						<h3 class="text-xl font-bold mb-2 text-foreground">Community & Team Sprouts</h3>
+						<p class="text-muted-foreground text-sm min-h-[4rem]">Thoughtful onboarding and welcoming new members with intention, planting seeds of trust and purpose so the project or community can root and come alive together.</p>
+					</CardContent>
+				</CardPremium>
+			</AnimateOnScroll>
 
-			<Card class="overflow-hidden">
-				<div class="relative h-48">
-					<img src="/hero-workshop.jpg" alt="Circles" class="w-full h-full object-cover" />
-				</div>
-				<CardContent class="pt-6">
-					<h3 class="text-xl font-bold mb-2 text-foreground">Circles of Transformation</h3>
-					<p class="text-muted-foreground text-sm">Co-created retreats and journeys designed with trusted partners and open for individuals to self-register and step into their growth and transformation.</p>
-				</CardContent>
-			</Card>
+			<AnimateOnScroll delay={0.75}>
+				<CardPremium class="overflow-hidden">
+					<div class="relative aspect-[4/3]">
+						<img src="/hero-workshop.jpg" alt="Circles" class="w-full h-full object-cover" />
+					</div>
+					<CardContent class="p-8">
+						<h3 class="text-xl font-bold mb-2 text-foreground">Circles of Transformation</h3>
+						<p class="text-muted-foreground text-sm min-h-[4rem]">Co-created retreats and journeys designed with trusted partners and open for individuals to self-register and step into their growth and transformation.</p>
+					</CardContent>
+				</CardPremium>
+			</AnimateOnScroll>
 		</div>
 
 		<div class="flex justify-center mt-12">
@@ -350,7 +381,7 @@
 </section>
 
 <!-- Lead Beyond The Mind -->
-<section class="py-20 bg-background">
+<section class="py-32 bg-background">
 	<div class="container mx-auto px-4 md:px-6">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div>
@@ -371,7 +402,7 @@
 </section>
 
 <!-- Contact CTA -->
-<section class="py-20 bg-card">
+<section class="py-32 bg-card">
 	<div class="container mx-auto px-4 md:px-6">
 		<div class="max-w-4xl mx-auto text-center">
 			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-foreground">Reach out - Let's connect and collaborate</h2>
@@ -383,7 +414,7 @@
 						<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
 					</svg>
 					<p class="font-semibold text-foreground mb-1">Email</p>
-					<p class="text-sm text-muted-foreground">fatma.ghedira@gmail.com</p>
+					<p class="text-sm text-muted-foreground">fatma@cooncircles.com</p>
 				</div>
 
 				<div class="text-center">

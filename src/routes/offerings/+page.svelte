@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
-	import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '$lib/components/ui/card';
+	import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardPremium } from '$lib/components/ui/card';
+	import AnimateOnScroll from '$lib/components/AnimateOnScroll.svelte';
+	import { Accordion, AccordionItem } from '$lib/components/ui/accordion';
 </script>
 
 <svelte:head>
@@ -8,7 +10,7 @@
 	<meta name="description" content="Ways we can work together through leadership coaching, team retreats, experience design, workshops, and community facilitation." />
 </svelte:head>
 
-<section class="relative py-20 bg-gradient-to-b from-earth-primary/10 to-background">
+<section class="relative py-32 bg-gradient-to-b from-earth-primary/10 to-background">
 	<div class="container mx-auto px-4 md:px-6">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div>
@@ -28,7 +30,7 @@
 	</div>
 </section>
 
-<section class="py-20 bg-background">
+<section class="py-32 bg-background">
 	<div class="container mx-auto px-4 md:px-6">
 		<h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">How we build matters as much as what we build.</h2>
 		<p class="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
@@ -40,7 +42,7 @@
 	</div>
 </section>
 
-<section class="py-20 bg-muted/50">
+<section class="py-32 bg-muted/30">
 	<div class="container mx-auto px-4 md:px-6">
 		<h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Ways We Can Work Together</h2>
 		<p class="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
@@ -48,7 +50,41 @@
 		</p>
 
 		<div class="space-y-16">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+			<!-- NEW: AI Transformation & Change Management -->
+			<AnimateOnScroll delay={0}>
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+					<div>
+						<img src="/service-ai-transformation.jpg" alt="AI Transformation" class="w-full h-64 object-cover rounded-lg mb-6" />
+						<div>
+							<p class="text-sm text-water font-semibold mb-2 uppercase tracking-wider">For Organizations</p>
+							<h3 class="text-2xl font-bold mb-4 text-foreground">AI Transformation & Responsible Technology Integration</h3>
+							<p class="text-base text-muted-foreground mb-6">AI implementation is not a technical challenge—it's a cultural one. Organizations rushing to integrate AI without addressing the ethical, relational, and emotional dimensions create resistance, misalignment, and systems that serve efficiency over people. Responsible AI transformation requires more than governance frameworks. It requires leaders who can hold the tension between innovation and integrity, and teams who understand how technology reshapes power, decision-making, and human dignity in their work.</p>
+							<p class="text-base text-muted-foreground mb-6">I partner with organizations to build human-centered AI adoption strategies that address ethics, governance, stakeholder trust, and the cultural shifts required when machines enter decision-making processes. This includes surfacing fears about displacement, clarifying where human judgment remains essential, and creating transparent communication about how AI will change roles, relationships, and organizational values. The work is part strategy, part facilitation, part ethical reckoning.</p>
+							<p class="text-base text-muted-foreground font-semibold mb-6">The result: AI integration that your people trust, that aligns with your stated values, and that positions your organization as a leader in responsible innovation. Because technology without ethical leadership doesn't just risk reputation—it risks becoming extractive of the very people it's meant to serve.</p>
+							<Button variant="default" size="default" asChild>
+								<a href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</a>
+							</Button>
+						</div>
+					</div>
+
+					<div>
+						<img src="/service-change-management.jpg" alt="Change Management" class="w-full h-64 object-cover rounded-lg mb-6" />
+						<div>
+							<p class="text-sm text-fire font-semibold mb-2 uppercase tracking-wider">For Organizations</p>
+							<h3 class="text-2xl font-bold mb-4 text-foreground">Change Management & Organizational Transformation</h3>
+							<p class="text-base text-muted-foreground mb-6">Restructures, mergers, and cultural shifts don't fail because of strategy—they fail because organizations underestimate the human complexity of change. When transformation touches 150 people across four cities, you can't afford to treat it as a communications exercise. It requires readiness assessment, stakeholder alignment, and the emotional intelligence to navigate resistance, grief, and power dynamics that surface when systems reorganize.</p>
+							<p class="text-base text-muted-foreground mb-6">I work with leadership teams to design change processes that integrate organizational psychology, systems thinking, and somatic awareness. This means identifying not just what needs to change, but how your people will experience that change—and building the communication strategies, transition support, and leadership capacity to meet them there. The goal isn't compliance; it's sustainable transformation where people understand the why, have space to process the what, and are equipped for the how.</p>
+							<p class="text-base text-muted-foreground font-semibold mb-6">The outcome: faster adoption, lower attrition, and a culture that can navigate future change with resilience rather than exhaustion. Because transformation that ignores the human system creates compliance at best—and at worst, organizational trauma that echoes for years.</p>
+							<Button variant="default" size="default" asChild>
+								<a href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</a>
+							</Button>
+						</div>
+					</div>
+				</div>
+			</AnimateOnScroll>
+
+			<AnimateOnScroll delay={0.1}>
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 					<div>
 						<img src="/service-coaching.jpg" alt="1:1 coaching" class="w-full h-64 object-cover rounded-lg mb-6" />
 						<div>
@@ -85,9 +121,11 @@
 							</Button>
 						</div>
 					</div>
-			</div>
+				</div>
+			</AnimateOnScroll>
 
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+			<AnimateOnScroll delay={0.2}>
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 					<div>
 						<img src="/service-experience.jpg" alt="Experience design" class="w-full h-64 object-cover rounded-lg mb-6" />
 						<div>
@@ -125,9 +163,11 @@
 							</Button>
 						</div>
 					</div>
-			</div>
+				</div>
+			</AnimateOnScroll>
 
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+			<AnimateOnScroll delay={0.3}>
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 					<div>
 						<img src="/service-speaking.jpg" alt="Speaking" class="w-full h-64 object-cover rounded-lg mb-6" />
 						<div>
@@ -146,12 +186,13 @@
 							</Button>
 						</div>
 					</div>
-			</div>
+				</div>
+			</AnimateOnScroll>
 		</div>
 	</div>
 </section>
 
-<section class="py-20 bg-background">
+<section class="py-32 bg-background">
 	<div class="container mx-auto px-4 md:px-6">
 		<div class="max-w-4xl mx-auto">
 			<blockquote class="border-l-4 border-earth-primary pl-6 py-8 my-12 bg-muted/30 rounded-r-lg">
@@ -165,7 +206,7 @@
 	</div>
 </section>
 
-<section class="py-20 bg-gradient-to-b from-earth-primary to-background">
+<section class="py-32 bg-earth-primary/5">
 	<div class="container mx-auto px-4 md:px-6">
 		<h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">The Framework That Grounds My Work</h2>
 		<p class="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
@@ -174,50 +215,40 @@
 		</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-				<Card>
-					<CardHeader>
-						<h3 class="text-lg font-bold text-earth-primary">Relationship to Self</h3>
-					</CardHeader>
-					<CardContent>
-						<p class="text-sm text-muted-foreground">Listening inwardly, regulating nervous system, acting without self-betrayal</p>
-					</CardContent>
-				</Card>
+			<AnimateOnScroll delay={0}>
+				<div class="bg-white/80 border border-muted rounded-xl p-8 border-l-4 border-l-earth-primary">
+					<h3 class="text-lg font-bold text-earth-primary mb-3">Relationship to Self</h3>
+					<p class="text-sm text-muted-foreground">Listening inwardly, regulating nervous system, acting without self-betrayal</p>
+				</div>
+			</AnimateOnScroll>
 
-				<Card>
-					<CardHeader>
-						<h3 class="text-lg font-bold text-water">Relationship to Others</h3>
-					</CardHeader>
-					<CardContent>
-						<p class="text-sm text-muted-foreground">Trust, honest communication, repair, and boundaries</p>
-					</CardContent>
-				</Card>
+			<AnimateOnScroll delay={0.1}>
+				<div class="bg-white/80 border border-muted rounded-xl p-8 border-l-4 border-l-water">
+					<h3 class="text-lg font-bold text-water mb-3">Relationship to Others</h3>
+					<p class="text-sm text-muted-foreground">Trust, honest communication, repair, and boundaries</p>
+				</div>
+			</AnimateOnScroll>
 
-				<Card>
-					<CardHeader>
-						<h3 class="text-lg font-bold text-air">Relationship to Power & Systems</h3>
-					</CardHeader>
-					<CardContent>
-						<p class="text-sm text-muted-foreground">Using influence responsibly, without domination or avoidance</p>
-					</CardContent>
-				</Card>
+			<AnimateOnScroll delay={0.2}>
+				<div class="bg-white/80 border border-muted rounded-xl p-8 border-l-4 border-l-air">
+					<h3 class="text-lg font-bold text-air mb-3">Relationship to Power & Systems</h3>
+					<p class="text-sm text-muted-foreground">Using influence responsibly, without domination or avoidance</p>
+				</div>
+			</AnimateOnScroll>
 
-				<Card>
-					<CardHeader>
-						<h3 class="text-lg font-bold text-fire">Relationship to Meaning</h3>
-					</CardHeader>
-					<CardContent>
-						<p class="text-sm text-muted-foreground">Values, faith, and purpose beyond ego or status</p>
-					</CardContent>
-				</Card>
+			<AnimateOnScroll delay={0.3}>
+				<div class="bg-white/80 border border-muted rounded-xl p-8 border-l-4 border-l-fire">
+					<h3 class="text-lg font-bold text-fire mb-3">Relationship to Meaning</h3>
+					<p class="text-sm text-muted-foreground">Values, faith, and purpose beyond ego or status</p>
+				</div>
+			</AnimateOnScroll>
 
-				<Card>
-					<CardHeader>
-						<h3 class="text-lg font-bold text-spirit">Relationship to Time</h3>
-					</CardHeader>
-					<CardContent>
-						<p class="text-sm text-muted-foreground">Patience, discernment, restraint, and protecting what is still emerging</p>
-					</CardContent>
-				</Card>
+			<AnimateOnScroll delay={0.4}>
+				<div class="bg-white/80 border border-muted rounded-xl p-8 border-l-4 border-l-spirit">
+					<h3 class="text-lg font-bold text-spirit mb-3">Relationship to Time</h3>
+					<p class="text-sm text-muted-foreground">Patience, discernment, restraint, and protecting what is still emerging</p>
+				</div>
+			</AnimateOnScroll>
 		</div>
 
 		<div class="mt-16 text-center">
@@ -228,45 +259,45 @@
 	</div>
 </section>
 
-<section class="py-20 bg-muted/50">
+<section class="py-32 bg-background">
 	<div class="container mx-auto px-4 md:px-6">
 		<h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">You Might Be Here If You Are …</h2>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-				<div class="flex gap-4 items-start">
-					<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
-					<p class="text-base text-muted-foreground">Carrying a long-term vision for something more just, humane, or regenerative and feeling alone in early stages</p>
-				</div>
+			<div class="flex gap-4 items-start">
+				<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
+				<p class="text-base text-muted-foreground">Carrying a long-term vision for something more just, humane, or regenerative and feeling alone in early stages</p>
+			</div>
 
-				<div class="flex gap-4 items-start">
-					<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
-					<p class="text-base text-muted-foreground">Tired of holding responsibility alone, without spaces where you can think, feel, and be honest</p>
-				</div>
+			<div class="flex gap-4 items-start">
+				<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
+				<p class="text-base text-muted-foreground">Tired of holding responsibility alone, without spaces where you can think, feel, and be honest</p>
+			</div>
 
-				<div class="flex gap-4 items-start">
-					<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
-					<p class="text-base text-muted-foreground">Technically strong and increasingly visible, yet sensing that people aren't truly rallying around you</p>
-				</div>
+			<div class="flex gap-4 items-start">
+				<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
+				<p class="text-base text-muted-foreground">Technically strong and increasingly visible, yet sensing that people aren't truly rallying around you</p>
+			</div>
 
-				<div class="flex gap-4 items-start">
-					<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
-					<p class="text-base text-muted-foreground">Building fast because slowing down feels risky, even as relationships fray or people quietly disengage</p>
-				</div>
+			<div class="flex gap-4 items-start">
+				<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
+				<p class="text-base text-muted-foreground">Building fast because slowing down feels risky, even as relationships fray or people quietly disengage</p>
+			</div>
 
-				<div class="flex gap-4 items-start">
-					<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
-					<p class="text-base text-muted-foreground">Succeeding on paper, while feeling a growing gap between your values and your day-to-day decisions</p>
-				</div>
+			<div class="flex gap-4 items-start">
+				<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
+				<p class="text-base text-muted-foreground">Succeeding on paper, while feeling a growing gap between your values and your day-to-day decisions</p>
+			</div>
 
-				<div class="flex gap-4 items-start">
-					<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
-					<p class="text-base text-muted-foreground">Committed to care, justice, or impact, yet noticing how urgency, pressure, or unexamined patterns are recreating the very harm you want to move away from</p>
-				</div>
+			<div class="flex gap-4 items-start">
+				<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
+				<p class="text-base text-muted-foreground">Committed to care, justice, or impact, yet noticing how urgency, pressure, or unexamined patterns are recreating the very harm you want to move away from</p>
+			</div>
 
-				<div class="flex gap-4 items-start">
-					<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
-					<p class="text-base text-muted-foreground">Committed to care, justice, or impact, yet noticing how urgency, pressure, or unexamined patterns are recreating the very harm you want to move away from</p>
-				</div>
+			<div class="flex gap-4 items-start">
+				<svg class="h-8 w-8 text-earth-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l-10 7 7-7 7"></path></svg>
+				<p class="text-base text-muted-foreground">Committed to care, justice, or impact, yet noticing how urgency, pressure, or unexamined patterns are recreating the very harm you want to move away from</p>
+			</div>
 		</div>
 
 		<div class="flex justify-center mt-12">
@@ -275,19 +306,18 @@
 	</div>
 </section>
 
-<section class="py-20 bg-background">
+<section class="py-32 bg-muted/30">
 	<div class="container mx-auto px-4 md:px-6">
 		<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">How Process Works</h2>
 		<p class="text-lg text-muted-foreground text-center mb-16 max-w-3xl mx-auto">I work relationally not transactionally. Which means we don't rush. We listen.</p>
 
-		<div class="max-w-4xl mx-auto space-y-16">
-				<div>
-					<h3 class="text-2xl font-bold mb-4 text-earth-primary">Who do you typically work with?</h3>
+		<div class="max-w-4xl mx-auto">
+			<Accordion>
+				<AccordionItem title="Who do you typically work with?" value="item-1">
 					<p class="text-lg text-muted-foreground">I collaborate with a wide range of groups—community leaders, executive teams, intentional communities, and social entrepreneurs. My approach is always tailored to unique needs and culture of each group, ensuring every gathering feels meaningful and inclusive.</p>
-				</div>
+				</AccordionItem>
 
-				<div>
-					<h3 class="text-2xl font-bold mb-4 text-earth-primary">What types of gatherings do you facilitate?</h3>
+				<AccordionItem title="What types of gatherings do you facilitate?" value="item-2">
 					<p class="text-lg text-muted-foreground mb-6">I design and guide team retreats, community listening sessions, conflict transformation circles, visioning workshops, and onboarding experiences for teams and communities that are starting. Each experience is crafted to foster connection, clarity, and a sense of belonging.</p>
 					<div class="bg-muted/50 p-6 rounded-lg border-l-4 border-earth-primary">
 						<p class="font-semibold mb-4 text-foreground">Process Flow:</p>
@@ -298,27 +328,24 @@
 							<li>• Launch: If it's aligned, we begin.</li>
 						</ul>
 					</div>
-				</div>
+				</AccordionItem>
 
-				<div>
-					<h3 class="text-2xl font-bold mb-4 text-earth-primary">How do you customize each experience?</h3>
+				<AccordionItem title="How do you customize each experience?" value="item-3">
 					<p class="text-lg text-muted-foreground">Every individual and group is different, so I start by listening deeply to your goals and challenges. Together, we co-create a process that honors your story, values, and aspirations—drawing from ancient wisdom, modern science, and nature-inspired practices.</p>
-				</div>
+				</AccordionItem>
 
-				<div>
-					<h3 class="text-2xl font-bold mb-4 text-earth-primary">Where do your workshops and retreats take place?</h3>
+				<AccordionItem title="Where do your workshops and retreats take place?" value="item-4">
 					<p class="text-lg text-muted-foreground">Most gatherings hosted in Tunisia. I am open to travel to location you choose or to virtually. Whether it's a serene retreat center, a vibrant community space, or an online setting, I'll help you find the right environment for your group.</p>
-				</div>
+				</AccordionItem>
 
-				<div>
-					<h3 class="text-2xl font-bold mb-4 text-earth-primary">How do we get started?</h3>
+				<AccordionItem title="How do we get started?" value="item-5">
 					<p class="text-lg text-muted-foreground">Simply reach out to schedule a conversation. We'll discuss your needs, explore possibilities, and see if we're a good fit. I'm here to answer any questions and help you design a gathering that truly matters.</p>
-				</div>
+				</AccordionItem>
 
-				<div>
-					<h3 class="text-2xl font-bold mb-4 text-earth-primary">What outcomes can we expect?</h3>
+				<AccordionItem title="What outcomes can we expect?" value="item-6">
 					<p class="text-lg text-muted-foreground">You can expect greater clarity, stronger relationships, and renewed alignment, increased trust and a feeling of connection within your team or community. My goal is to create space for honest dialogue, and actionable next steps that support your ongoing growth.</p>
-				</div>
+				</AccordionItem>
+			</Accordion>
 		</div>
 	</div>
 </section>
