@@ -153,74 +153,56 @@
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			<AnimateOnScroll delay={0}>
-				<Card class="overflow-hidden flex flex-col">
-					<CardContent class="pt-6 pb-4 flex-grow">
+				<Card class="border-l-4 border-earth-primary">
+					<CardContent class="pt-6 pb-6">
 						<h3 class="text-lg font-bold mb-3 text-earth-primary">Cultivate inner safety</h3>
 						<p class="text-sm text-muted-foreground leading-relaxed">Building the internal foundation that allows for presence and clarity</p>
 					</CardContent>
-					<div class="relative h-56">
-						<img src="/why-leaders-inner-safety.jpg" alt="Inner safety" class="w-full h-full object-cover" loading="lazy" />
-					</div>
 				</Card>
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={0.1}>
-				<Card class="overflow-hidden flex flex-col">
-					<CardContent class="pt-6 pb-4 flex-grow">
+				<Card class="border-l-4 border-fire">
+					<CardContent class="pt-6 pb-6">
 						<h3 class="text-lg font-bold mb-3 text-fire">Confront shadow and bias</h3>
 						<p class="text-sm text-muted-foreground leading-relaxed">Looking honestly at what we've been avoiding or denying</p>
 					</CardContent>
-					<div class="relative h-56">
-						<img src="/why-leaders-shadow.jpg" alt="Shadow work" class="w-full h-full object-cover" loading="lazy" />
-					</div>
 				</Card>
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={0.2}>
-				<Card class="overflow-hidden flex flex-col">
-					<CardContent class="pt-6 pb-4 flex-grow">
+				<Card class="border-l-4 border-water">
+					<CardContent class="pt-6 pb-6">
 						<h3 class="text-lg font-bold mb-3 text-water">Transform relationships</h3>
 						<p class="text-sm text-muted-foreground leading-relaxed">Moving from transactional to truly relational leadership</p>
 					</CardContent>
-					<div class="relative h-56">
-						<img src="/why-leaders-relationships.jpg" alt="Relational leadership" class="w-full h-full object-cover" loading="lazy" />
-					</div>
 				</Card>
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={0.3}>
-				<Card class="overflow-hidden flex flex-col">
-					<CardContent class="pt-6 pb-4 flex-grow">
+				<Card class="border-l-4 border-air">
+					<CardContent class="pt-6 pb-6">
 						<h3 class="text-lg font-bold mb-3 text-air">Design safe and brave spaces</h3>
 						<p class="text-sm text-muted-foreground leading-relaxed">Creating containers where truth can be spoken and heard</p>
 					</CardContent>
-					<div class="relative h-56">
-						<img src="/why-leaders-spaces.jpg" alt="Safe spaces" class="w-full h-full object-cover" loading="lazy" />
-					</div>
 				</Card>
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={0.4}>
-				<Card class="overflow-hidden flex flex-col">
-					<CardContent class="pt-6 pb-4 flex-grow">
+				<Card class="border-l-4 border-spirit">
+					<CardContent class="pt-6 pb-6">
 						<h3 class="text-lg font-bold mb-3 text-spirit">Integrate healing and leadership</h3>
 						<p class="text-sm text-muted-foreground leading-relaxed">Understanding that how we lead is inseparable from who we are</p>
 					</CardContent>
-					<div class="relative h-56">
-						<img src="/why-leaders-healing.jpg" alt="Healing integration" class="w-full h-full object-cover" loading="lazy" />
-					</div>
 				</Card>
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={0.5}>
-				<Card class="overflow-hidden flex flex-col">
-					<CardContent class="pt-6 pb-4 flex-grow">
+				<Card class="border-l-4 border-earth-extra">
+					<CardContent class="pt-6 pb-6">
 						<h3 class="text-lg font-bold mb-3 text-earth-extra">Model regenerative leadership</h3>
 						<p class="text-sm text-muted-foreground leading-relaxed">Leading in ways that restore rather than deplete</p>
 					</CardContent>
-					<div class="relative h-56">
-						<img src="/why-leaders-regenerative.jpg" alt="Regenerative leadership" class="w-full h-full object-cover" loading="lazy" />
-					</div>
 				</Card>
 			</AnimateOnScroll>
 		</div>
