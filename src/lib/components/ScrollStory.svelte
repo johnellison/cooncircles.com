@@ -1,13 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
+	interface StorySection {
+		text: string;
+		image?: string;
+		imageAlt?: string;
+	}
+
 	interface Props {
-		paragraphs: string[];
+		sections: StorySection[];
 		class?: string;
 	}
 
 	let {
-		paragraphs,
+		sections,
 		class: className = ''
 	}: Props = $props();
 
@@ -16,20 +22,20 @@
 	let containerHeight = $state(0);
 	let windowHeight = $state(0);
 	let scrollY = $state(0);
-	let mounted = $state(false);
+	let mounted = $state(0);
 
 	// Check for reduced motion preference
 	const prefersReducedMotion = typeof window !== 'undefined'
 		? window.matchMedia('(prefers-reduced-motion: reduce)').matches
 		: false;
 
-	// Total scrollable height = number of paragraphs * 100vh
-	const totalSections = $derived(paragraphs.length);
+	// Total scrollable height = number of sections * 100vh
+	const totalSections = $derived(sections.length);
 
-	// Calculate which paragraph is active and its opacity based on scroll position
-	const paragraphStates = $derived(() => {
+	// Calculate which section is active and its opacity based on scroll position
+	const sectionStates = $derived(() => {
 		if (!mounted || prefersReducedMotion) {
-			return paragraphs.map((_, i) => ({
+			return sections.map((_, i) => ({
 				opacity: prefersReducedMotion ? 1 : (i === 0 ? 1 : 0),
 				translateY: 0,
 				active: prefersReducedMotion || i === 0
@@ -39,16 +45,16 @@
 		// How far through the container we've scrolled (0 to 1)
 		const scrollableHeight = containerHeight - windowHeight;
 		if (scrollableHeight <= 0) {
-			return paragraphs.map((_, i) => ({ opacity: i === 0 ? 1 : 0, translateY: 0, active: i === 0 }));
+			return sections.map((_, i) => ({ opacity: i === 0 ? 1 : 0, translateY: 0, active: i === 0 }));
 		}
 
 		const relativeScroll = Math.max(0, scrollY - containerTop);
 		const progress = Math.min(1, Math.max(0, relativeScroll / scrollableHeight));
 
-		// Each paragraph occupies an equal portion of the scroll range
+		// Each section occupies an equal portion of the scroll range
 		const sectionSize = 1 / totalSections;
 
-		return paragraphs.map((_, i) => {
+		return sections.map((_, i) => {
 			const sectionStart = i * sectionSize;
 			const sectionEnd = (i + 1) * sectionSize;
 			const fadeInEnd = sectionStart + sectionSize * 0.3;
@@ -77,7 +83,7 @@
 				}
 			}
 
-			// First paragraph should start visible
+			// First section should start visible
 			if (i === 0 && progress < fadeInEnd) {
 				opacity = Math.max(opacity, 1 - (progress / (sectionSize * 0.3)));
 				if (progress === 0) {
@@ -143,20 +149,42 @@
 >
 	<!-- Sticky container that stays in viewport -->
 	<div class="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-		<div class="max-w-4xl mx-auto px-6 relative w-full">
-			{#each paragraphs as paragraph, i}
+		<div class="max-w-7xl mx-auto px-6 relative w-full">
+			{#each sections as section, i}
 				<div
 					class="absolute inset-0 flex items-center px-6"
 					style="
-						opacity: {paragraphStates()[i].opacity};
-						transform: translateY({paragraphStates()[i].translateY}px);
+						opacity: {sectionStates()[i].opacity};
+						transform: translateY({sectionStates()[i].translateY}px);
 						transition: {prefersReducedMotion ? 'none' : 'opacity 0.1s ease-out, transform 0.1s ease-out'};
-						pointer-events: {paragraphStates()[i].active ? 'auto' : 'none'};
+						pointer-events: {sectionStates()[i].active ? 'auto' : 'none'};
 					"
 				>
-					<p class="text-2xl md:text-3xl lg:text-4xl leading-relaxed text-foreground font-medium">
-						{paragraph}
-					</p>
+					{#if section.image}
+						<!-- Layout with image -->
+						<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
+							<div>
+								<p class="text-2xl md:text-3xl lg:text-4xl leading-relaxed text-foreground font-medium">
+									{section.text}
+								</p>
+							</div>
+							<div class="relative hidden lg:block">
+								<img
+									src={section.image}
+									alt={section.imageAlt || ''}
+									class="rounded-lg shadow-2xl w-full h-auto object-cover max-h-[70vh]"
+									loading="lazy"
+								/>
+							</div>
+						</div>
+					{:else}
+						<!-- Text only layout -->
+						<div class="max-w-4xl mx-auto">
+							<p class="text-2xl md:text-3xl lg:text-4xl leading-relaxed text-foreground font-medium">
+								{section.text}
+							</p>
+						</div>
+					{/if}
 				</div>
 			{/each}
 		</div>
@@ -165,7 +193,7 @@
 	<!-- Progress indicator -->
 	{#if !prefersReducedMotion}
 		<div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-2 items-center">
-			{#each paragraphs as _, i}
+			{#each sections as _, i}
 				{@const sectionSize = 1 / totalSections}
 				{@const isActive = scrollProgress() >= i * sectionSize && scrollProgress() < (i + 1) * sectionSize}
 				<div

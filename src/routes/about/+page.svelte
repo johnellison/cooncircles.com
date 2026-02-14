@@ -93,19 +93,19 @@
 
 <!-- Scroll-Based Narrative -->
 <ScrollStory
-	paragraphs={[
-		"I grew up in a home where love was present, but safety was not.",
-		"My parents didn't have emotional tools to feel safe within themselves, and as eldest daughter, I became the emotional translator of the house.",
-		"By seven, I was scanning room for signs of danger and doing everything I could to keep things together.",
-		"I became a vessel for everything unspoken. I felt everything no one else could name.",
-		"And I carried that hyper-attunement into adulthood—performing, adapting, overachieving—until my body said no.",
-		"My breaking point came when I moved to New York.",
-		"I was working two jobs while carrying the pressure of my Master's at Columbia University; constantly doing, constantly holding, constantly performing.",
-		"Until my body said 'No.'",
-		"I lost the ability to use my hands. Panic attacks replaced my breath. My system collapsed.",
-		"That was the beginning.",
-		"This was first time I realized: healing doesn't happen in the mind.",
-		"It happens when someone finally holds the parts of us that have been carrying too much, for too long."
+	sections={[
+		{ text: "I grew up in a home where love was present, but safety was not." },
+		{ text: "My parents didn't have emotional tools to feel safe within themselves, and as eldest daughter, I became the emotional translator of the house." },
+		{ text: "By seven, I was scanning room for signs of danger and doing everything I could to keep things together." },
+		{ text: "I became a vessel for everything unspoken. I felt everything no one else could name." },
+		{ text: "And I carried that hyper-attunement into adulthood—performing, adapting, overachieving—until my body said no.", image: "/body-said-no-europeana-AavlUplxqf4-unsplash.webp", imageAlt: "Body exhaustion" },
+		{ text: "My breaking point came when I moved to New York.", image: "/nyc-skyline-emiliano-bar-kheTI8pIywU-unsplash.webp", imageAlt: "New York City skyline" },
+		{ text: "I was working two jobs while carrying the pressure of my Master's at Columbia University; constantly doing, constantly holding, constantly performing." },
+		{ text: "Until my body said 'No.'" },
+		{ text: "I lost the ability to use my hands. Panic attacks replaced my breath. My system collapsed." },
+		{ text: "That was the beginning." },
+		{ text: "This was first time I realized: healing doesn't happen in the mind." },
+		{ text: "It happens when someone finally holds the parts of us that have been carrying too much, for too long." }
 	]}
 />
 
