@@ -65,13 +65,19 @@
 			<CardPremium class="p-10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 				<div class="flex items-center gap-4 mb-4">
 					<svg class="h-8 w-8 text-earth-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-7 7-7 7m0-7-2 0-2 2v4c0 3.9 3 3 3.9 0 7-3.9-7-3-9-3.9 7 7-7 7 3.9 7 7 0 7-7 2h-2v7.5c0-2.5-5.5 0-5.5 5.5 5.5 0 7-5.5 5.5 5.5 7.5V18.5A2.5 2.5 0 0 0-5-2.5 2.5 0-7-5.5 5.5-5.5 7.5V18.5A2.5 2.5 0 0 0-5-2.5 5.5 0-7-5.5 5.5-5.5 7.5V18.5z"></path></svg>
-					<h3 class="text-xl font-bold text-foreground">Location</h3>
+					<h3 class="text-xl font-bold text-foreground">Locations</h3>
 				</div>
 				<p class="text-base text-muted-foreground mb-4">Visit for a cup of tea and conversation.</p>
-				<div class="space-y-1">
-					<p class="text-lg font-medium text-foreground">Franceville</p>
-					<p class="text-lg font-medium text-foreground">Sidi Bou Said</p>
-					<p class="text-lg font-medium text-muted-foreground">Tunis, Tunisia</p>
+				<div class="space-y-3">
+					<div class="space-y-1">
+						<p class="text-lg font-medium text-foreground">Tunisia</p>
+						<p class="text-sm text-foreground">Franceville, Sidi Bou Said</p>
+						<p class="text-sm text-muted-foreground">Tunis</p>
+					</div>
+					<div class="space-y-1">
+						<p class="text-lg font-medium text-foreground">Morocco</p>
+						<p class="text-sm text-muted-foreground">Taghazout</p>
+					</div>
 				</div>
 			</CardPremium>
 		</div>
