@@ -58,12 +58,8 @@
 				</div>
 
 				<div class="flex flex-wrap gap-4">
-					<Button variant="default" size="lg" asChild>
-						<a href="https://calendly.com/fatma-ghedira/30min">Book a call</a>
-					</Button>
-					<Button variant="outline" size="lg" asChild>
-						<a href="/offerings">See offerings</a>
-					</Button>
+					<Button variant="default" size="lg" href="https://calendly.com/fatma-ghedira/30min">Book a call</Button>
+					<Button variant="outline" size="lg" href="/offerings">See offerings</Button>
 				</div>
 			</div>
 		</div>
@@ -139,12 +135,8 @@
 		</div>
 
 		<div class="flex justify-center gap-4 mt-12">
-			<Button variant="default" size="lg" asChild>
-				<a href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</a>
-			</Button>
-			<Button variant="outline" size="lg" asChild>
-				<a href="/offerings">See offerings</a>
-			</Button>
+			<Button variant="default" size="lg" href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</Button>
+			<Button variant="outline" size="lg" href="/offerings">See offerings</Button>
 		</div>
 	</div>
 </section>
@@ -214,12 +206,8 @@
 		</div>
 
 		<div class="flex justify-center gap-4 mt-12">
-			<Button variant="default" size="lg" asChild>
-				<a href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</a>
-			</Button>
-			<Button variant="outline" size="lg" asChild>
-				<a href="/offerings">See my offerings</a>
-			</Button>
+			<Button variant="default" size="lg" href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</Button>
+			<Button variant="outline" size="lg" href="/offerings">See my offerings</Button>
 		</div>
 	</div>
 </section>
@@ -361,9 +349,7 @@
 		</div>
 
 		<div class="flex justify-center mt-12">
-			<Button variant="default" size="lg" asChild>
-				<a href="/offerings">See all offerings</a>
-			</Button>
+			<Button variant="default" size="lg" href="/offerings">See all offerings</Button>
 		</div>
 	</div>
 </section>
@@ -378,9 +364,7 @@
 				<p class="text-lg text-muted-foreground mb-8 leading-relaxed">
 					Alongside group and individual coaching, I weave in somatic practices using sound, movement and water practices to ensure growth is felt, embodied and sustainable—not only understood.
 				</p>
-				<Button variant="default" size="lg" asChild>
-					<a href="https://calendly.com/fatma-ghedira/30min">Book a Discovery Call</a>
-				</Button>
+				<Button variant="default" size="lg" href="https://calendly.com/fatma-ghedira/30min">Book a Discovery Call</Button>
 			</div>
 			<div class="relative hidden lg:block">
 				<img src="/fatma-sound-healing.webp" alt="Fatma sound healing" class="rounded-lg shadow-2xl w-full object-cover" />
@@ -424,9 +408,7 @@
 				</div>
 			</div>
 
-			<Button variant="default" size="lg" asChild>
-				<a href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</a>
-			</Button>
+			<Button variant="default" size="lg" href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</Button>
 		</div>
 	</div>
 </section>

@@ -25,6 +25,9 @@
 						>
 					</li>
 					<li>
+						<a href="/coaching-companion" class="text-sm text-white/70 hover:text-white transition-colors">Coaching Companion</a>
+					</li>
+					<li>
 						<a href="/about" class="text-sm text-white/70 hover:text-white transition-colors"
 							>About</a
 						>

@@ -19,9 +19,7 @@
 				</p>
 				<div class="flex flex-wrap gap-4">
 					<Button variant="secondary" size="lg">Book time together here!</Button>
-					<Button variant="secondary" size="lg" asChild>
-						<a href="#contact">Contact Info</a>
-					</Button>
+					<Button variant="secondary" size="lg" href="#contact">Contact Info</Button>
 				</div>
 			</div>
 			<div class="relative hidden lg:block">
@@ -93,9 +91,7 @@
 					"Never underestimate power of a small group of committed people to change world. In fact, it is the only thing that ever has." ~ Margaret Mead.
 				</p>
 				<div class="text-center mt-8">
-					<Button variant="default" size="lg" asChild>
-						<a href="https://calendly.com/fatma-ghedira/30min">Book a Discovery Call</a>
-					</Button>
+					<Button variant="default" size="lg" href="https://calendly.com/fatma-ghedira/30min">Book a Discovery Call</Button>
 				</div>
 			</blockquote>
 		</div>
@@ -107,9 +103,7 @@
 			</p>
 			<div class="flex flex-wrap justify-center gap-4">
 				<Button variant="default" size="lg">Book 30-min Call</Button>
-				<Button variant="outline" size="lg" asChild>
-					<a href="/offerings">Explore Offerings</a>
-				</Button>
+				<Button variant="outline" size="lg" href="/offerings">Explore Offerings</Button>
 			</div>
 		</div>
 	</div>

@@ -61,9 +61,7 @@
 							<p class="text-base text-muted-foreground mb-6">AI implementation is not a technical challenge—it's a cultural one. Organizations rushing to integrate AI without addressing the ethical, relational, and emotional dimensions create resistance, misalignment, and systems that serve efficiency over people. Responsible AI transformation requires more than governance frameworks. It requires leaders who can hold the tension between innovation and integrity, and teams who understand how technology reshapes power, decision-making, and human dignity in their work.</p>
 							<p class="text-base text-muted-foreground mb-6">I partner with organizations to build human-centered AI adoption strategies that address ethics, governance, stakeholder trust, and the cultural shifts required when machines enter decision-making processes. This includes surfacing fears about displacement, clarifying where human judgment remains essential, and creating transparent communication about how AI will change roles, relationships, and organizational values. The work is part strategy, part facilitation, part ethical reckoning.</p>
 							<p class="text-base text-muted-foreground font-semibold mb-6">The result: AI integration that your people trust, that aligns with your stated values, and that positions your organization as a leader in responsible innovation. Because technology without ethical leadership doesn't just risk reputation—it risks becoming extractive of the very people it's meant to serve.</p>
-							<Button variant="default" size="default" asChild>
-								<a href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</a>
-							</Button>
+							<Button variant="default" size="default" href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</Button>
 						</div>
 					</div>
 
@@ -75,9 +73,7 @@
 							<p class="text-base text-muted-foreground mb-6">Restructures, mergers, and cultural shifts don't fail because of strategy—they fail because organizations underestimate the human complexity of change. When transformation touches 150 people across four cities, you can't afford to treat it as a communications exercise. It requires readiness assessment, stakeholder alignment, and the emotional intelligence to navigate resistance, grief, and power dynamics that surface when systems reorganize.</p>
 							<p class="text-base text-muted-foreground mb-6">I work with leadership teams to design change processes that integrate organizational psychology, systems thinking, and somatic awareness. This means identifying not just what needs to change, but how your people will experience that change—and building the communication strategies, transition support, and leadership capacity to meet them there. The goal isn't compliance; it's sustainable transformation where people understand the why, have space to process the what, and are equipped for the how.</p>
 							<p class="text-base text-muted-foreground font-semibold mb-6">The outcome: faster adoption, lower attrition, and a culture that can navigate future change with resilience rather than exhaustion. Because transformation that ignores the human system creates compliance at best—and at worst, organizational trauma that echoes for years.</p>
-							<Button variant="default" size="default" asChild>
-								<a href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</a>
-							</Button>
+							<Button variant="default" size="default" href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</Button>
 						</div>
 					</div>
 				</div>
@@ -98,9 +94,7 @@
 								<li>• Navigate power, conflict, and decision-making with integrity</li>
 								<li>• Develop leadership capacity required to sustain what you are creating</li>
 							</ul>
-							<Button variant="default" size="default" asChild>
-								<a href="https://calendly.com/fatma-ghedira/30min">Book time with me</a>
-							</Button>
+							<Button variant="default" size="default" href="https://calendly.com/fatma-ghedira/30min">Book time with me</Button>
 						</div>
 					</div>
 
@@ -116,9 +110,7 @@
 								<li>• Communication, boundaries, and accountability</li>
 								<li>• Ethical use of power within group</li>
 							</ul>
-							<Button variant="default" size="default" asChild>
-								<a href="https://calendly.com/fatma-ghedira/30min">Book time with me</a>
-							</Button>
+							<Button variant="default" size="default" href="https://calendly.com/fatma-ghedira/30min">Book time with me</Button>
 						</div>
 					</div>
 				</div>
@@ -139,9 +131,7 @@
 								<li>• Support you in creating an ecosystem for this activity to thrive</li>
 							</ul>
 							<p class="text-sm italic text-muted-foreground mb-6">This is about creating experiences that leave a deep imprint—not just a nice moment.</p>
-							<Button variant="default" size="default" asChild>
-								<a href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</a>
-							</Button>
+							<Button variant="default" size="default" href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</Button>
 						</div>
 					</div>
 
@@ -158,9 +148,7 @@
 								<li>• Improve group dynamics through relational and systemic awareness</li>
 								<li>• Create systems and processes around shared goals</li>
 							</ul>
-							<Button variant="default" size="default" asChild>
-								<a href="https://calendly.com/fatma-ghedira/30min">Book time with me</a>
-							</Button>
+							<Button variant="default" size="default" href="https://calendly.com/fatma-ghedira/30min">Book time with me</Button>
 						</div>
 					</div>
 				</div>
@@ -181,9 +169,7 @@
 								<li>• Healing through community</li>
 								<li>• The future of conscious collaboration</li>
 							</ul>
-							<Button variant="default" size="default" asChild>
-								<a href="https://calendly.com/fatma-ghedira/30min">Book time with me</a>
-							</Button>
+							<Button variant="default" size="default" href="https://calendly.com/fatma-ghedira/30min">Book time with me</Button>
 						</div>
 					</div>
 				</div>
@@ -252,9 +238,7 @@
 		</div>
 
 		<div class="mt-16 text-center">
-			<Button variant="default" size="lg" asChild>
-				<a href="https://calendly.com/fatma-ghedira/30min">Book a discovery call now</a>
-			</Button>
+			<Button variant="default" size="lg" href="https://calendly.com/fatma-ghedira/30min">Book a discovery call now</Button>
 		</div>
 	</div>
 </section>
