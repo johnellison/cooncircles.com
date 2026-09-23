@@ -1269,7 +1269,9 @@
     .relationship-grid,
     .human-grid,
     .theory,
-    .faq,
+    .faq {
+      gap: 45px;
+    }
     .plan {
       padding: 22px 18px;
     }
@@ -1368,7 +1370,10 @@
     .relationship-grid,
     .theory,
     .human-grid,
-    .faq,
+    .faq {
+      grid-template-columns: 1fr;
+      gap: 38px;
+    }
     .relationship {
       padding-block: 55px;
     }
