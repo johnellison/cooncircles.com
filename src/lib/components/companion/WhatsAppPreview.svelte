@@ -59,41 +59,43 @@
       onclick={() => (conversation = "after")}>After the conversation</button
     >
   </div>
-  <div class="phone">
-    <div class="phone-status" aria-hidden="true">
-      <span>9:41</span><span class="island"></span><span>▮▮▮ ▰</span>
-    </div>
-    <div class="chat-header">
-      <span class="back" aria-hidden="true">‹</span><span
-        class="avatar"
-        aria-hidden="true">c.</span
-      >
-      <div>
-        <strong>Coon Companion</strong><span>AI coaching · on WhatsApp</span>
+  <div class="device-stage">
+    <div class="phone">
+      <div class="phone-status" aria-hidden="true">
+        <span>9:41</span><span class="island"></span><span>▮▮▮ ▰</span>
       </div>
-    </div>
-    <div class="chat-content" aria-live="polite" aria-atomic="true">
-      <span class="day-label">AN EXAMPLE MOMENT</span>
-      <p class="disclosure">
-        An AI companion shaped by Fatma’s approach. It is not Fatma.
-      </p>
-      {#each conversations[conversation] as message}
-        <div class:sent={message.from === "you"} class="bubble">
-          <span class="sr-only"
-            >{message.from === "you" ? "You" : "Companion"}:
-          </span>{message.text}
-          <span class="time" aria-hidden="true"
-            >{message.time}{message.from === "you" ? " ✓✓" : ""}</span
-          >
+      <div class="chat-header">
+        <span class="back" aria-hidden="true">‹</span><span
+          class="avatar"
+          aria-hidden="true">c.</span
+        >
+        <div>
+          <strong>Coon Companion</strong><span>AI coaching · on WhatsApp</span>
         </div>
-      {/each}
+      </div>
+      <div class="chat-content" aria-live="polite" aria-atomic="true">
+        <span class="day-label">AN EXAMPLE MOMENT</span>
+        <p class="disclosure">
+          An AI companion shaped by Fatma’s approach. It is not Fatma.
+        </p>
+        {#each conversations[conversation] as message}
+          <div class:sent={message.from === "you"} class="bubble">
+            <span class="sr-only"
+              >{message.from === "you" ? "You" : "Companion"}:
+            </span>{message.text}
+            <span class="time" aria-hidden="true"
+              >{message.time}{message.from === "you" ? " ✓✓" : ""}</span
+            >
+          </div>
+        {/each}
+      </div>
+      <div class="compose" aria-hidden="true">
+        <span>＋</span>
+        <div>A little space to think…</div>
+        <span>◉</span>
+      </div>
+      <div class="home-bar" aria-hidden="true"></div>
     </div>
-    <div class="compose" aria-hidden="true">
-      <span>＋</span>
-      <div>A little space to think…</div>
-      <span>◉</span>
-    </div>
-    <div class="home-bar" aria-hidden="true"></div>
   </div>
   <figcaption>
     Illustrative exchanges. Not real client conversations.
@@ -103,7 +105,8 @@
 <style>
   .chat-demo {
     margin: 0;
-    width: min(100%, 390px);
+    width: 360px;
+    max-width: 100%;
     position: relative;
   }
   .scene-switch {
@@ -128,7 +131,18 @@
     outline: 3px solid #675032;
     outline-offset: 3px;
   }
+  .device-stage {
+    width: 360px;
+    height: 780px;
+    margin-inline: auto;
+  }
   .phone {
+    width: 360px;
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    transform-origin: top left;
+    flex-shrink: 0;
     border: 7px solid #49473d;
     border-radius: 44px;
     overflow: hidden;
@@ -139,6 +153,7 @@
   }
   .phone-status {
     height: 37px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -192,9 +207,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 16px;
     padding: 18px 15px 22px;
-    min-height: 400px;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
     background-color: #e9e9df;
     background-image: radial-gradient(#c5c8b96b 1px, transparent 1px);
     background-size: 17px 17px;
@@ -204,7 +221,7 @@
     padding: 4px 10px;
     background: #ffffffc9;
     border-radius: 5px;
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: 0.1em;
     color: #5d645b;
   }
@@ -213,7 +230,7 @@
     max-width: 235px;
     text-align: center;
     color: #595c4d;
-    font-size: 9px;
+    font-size: 11px;
     line-height: 1.5;
     margin: 0 0 2px;
   }
@@ -222,7 +239,7 @@
     border-radius: 2px 12px 12px 12px;
     color: #303e34;
     padding: 11px 12px 6px;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.6;
     max-width: 88%;
     box-shadow: 0 1px 2px #0000000b;
@@ -235,7 +252,7 @@
   .time {
     display: block;
     text-align: right;
-    font-size: 8px;
+    font-size: 10px;
     color: #64715d;
     line-height: 1.4;
     margin-top: 4px;
@@ -256,6 +273,7 @@
     color: #747970;
   }
   .home-bar {
+    flex-shrink: 0;
     background: #49473d;
     width: 100px;
     height: 4px;
@@ -269,13 +287,22 @@
     line-height: 1.6;
     margin-top: 20px;
   }
-  @media (max-width: 400px) {
-    .chat-content {
-      padding: 14px 11px;
+  @media (max-width: 420px) {
+    .device-stage {
+      width: 300px;
+      height: 650px;
     }
-    .scene-switch button {
-      font-size: 10px;
-      padding: 8px;
+    .phone {
+      transform: scale(0.8333333333);
+    }
+  }
+  @media (max-width: 359px) {
+    .device-stage {
+      width: 270px;
+      height: 585px;
+    }
+    .phone {
+      transform: scale(0.75);
     }
   }
 </style>

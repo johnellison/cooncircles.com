@@ -49,9 +49,7 @@
       <div class="order">
         <div>
           <strong>{offer.name}</strong><span
-            >{offer.replies} companion replies · {offer.id === "invitation"
-              ? "30 days"
-              : "monthly allowance"}</span
+            >{offer.replies} companion replies · monthly allowance</span
           >
         </div>
         <strong>{offer.price} <small>TND</small></strong>
@@ -101,10 +99,8 @@
         </p>
       {/if}
       <p class="terms">
-        {offer.id === "invitation"
-          ? "One month to explore. No automatic renewal or move to a higher price."
-          : "Proposed monthly billing. Cancel before the next renewal. No automatic usage overages."}
-        Live sessions are separate.
+        Proposed monthly billing. Cancel before the next renewal. No automatic
+        usage overages. Live sessions are separate.
       </p>
       <button class="primary" onclick={() => (stage = "complete")}
         >{method === "card"
@@ -150,7 +146,7 @@
     border-radius: 30px;
     color: #57452f;
     padding: 14px 20px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     text-align: left;
     transition: background 0.2s;

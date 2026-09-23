@@ -1,8 +1,7 @@
 <script lang="ts">
   import WhatsAppPreview from "./WhatsAppPreview.svelte";
   import CheckoutPreview from "./CheckoutPreview.svelte";
-  import { plans, invitation } from "./offers";
-  let { invited = false }: { invited?: boolean } = $props();
+  import { plans } from "./offers";
   const comparisons = [
     {
       question: "A practice shaped for you",
@@ -53,7 +52,7 @@
     },
     {
       q: "Can I cancel?",
-      a: "The proposed plans are monthly. Cancel before the next renewal to prevent the next charge, with access through the paid period. The first-month invitation does not renew automatically. Final cancellation and refund terms will be shared before any real payment.",
+      a: "The proposed plans are monthly. Cancel before the next renewal to prevent the next charge, with access through the paid period. Final cancellation and refund terms will be shared before any real payment.",
     },
     {
       q: "How would I pay from Tunisia?",
@@ -67,9 +66,7 @@
 </script>
 
 <svelte:head>
-  <title
-    >{invited ? "An invitation to continue" : "Coaching Companion"} · Coon Circles</title
-  >
+  <title>Coaching Companion · Coon Circles</title>
   <meta
     name="description"
     content="The questions Fatma would ask you, between your sessions. Explore a coaching companion on WhatsApp, shaped by your work together."
@@ -87,35 +84,35 @@
       <div class="eyebrow">
         <span class="small-circle" aria-hidden="true"></span> COON COACHING COMPANION
       </div>
-      {#if invited}<p class="invitation-kicker">
-          An invitation to continue our work.
-        </p>{/if}
       <h1 id="companion-title">
         The questions I would ask you,<br /><em>between our sessions.</em>
       </h1>
-      <p class="hero-intro">
-        I am going on maternity leave. Your business is not.
-      </p>
-      <p class="hero-body">
-        So I built a companion on WhatsApp, shaped by my questions, my
-        directness, and the work we choose to carry forward together. A little
-        space to pause, find your own clarity, and decide what comes next.
-      </p>
+      <figure class="fatma-note">
+        <blockquote>
+          <p class="hero-intro">
+            “I am going on maternity leave. Your business is not.
+          </p>
+          <p class="hero-body">
+            So I built a companion on WhatsApp, shaped by my questions, my
+            directness, and the work we choose to carry forward together. A
+            little space to pause, find your own clarity, and decide what comes
+            next.”
+          </p>
+        </blockquote>
+        <figcaption class="signature">
+          <span class="profile-photo"
+            ><img src="/hero-fatma.webp" alt="" width="72" height="72" /></span
+          >
+          <span>Fatma Ghedira</span>
+        </figcaption>
+      </figure>
       <div class="hero-actions">
-        <a class="button primary" href={invited ? "#invitation" : "#plans"}
-          >{invited ? "Explore your invitation" : "Find your rhythm"}
+        <a class="button primary" href="#plans"
+          >Find your rhythm
           <span aria-hidden="true">↗</span></a
         ><a class="text-link" href="#how-it-works"
           >How it works <span aria-hidden="true">↓</span></a
         >
-      </div>
-      <div class="signature">
-        <img src="/hero-fatma.webp" alt="" width="48" height="48" />
-        <div>
-          <span>A note from Fatma</span><small
-            >Your coach. Still the person behind the practice.</small
-          >
-        </div>
       </div>
       <p class="hero-footnote">
         An AI companion, not me. Personal notes when I can.<br />No promised
@@ -381,49 +378,6 @@
     </div>
   </section>
 
-  {#if invited}
-    <section
-      id="invitation"
-      class="invitation-section"
-      aria-labelledby="invitation-title"
-    >
-      <div class="wrap invitation-grid">
-        <div>
-          <p class="eyebrow">A THANK-YOU FOR THE WORK WE HAVE BEGUN</p>
-          <h2 id="invitation-title">
-            Let us begin<br /><em>with one month.</em>
-          </h2>
-          <p>
-            I would like you to have room to explore this, without having to
-            make a big commitment. The Practice allowance, at the Reflect price.
-            At the end, we decide what feels useful.
-          </p>
-          <p class="small-copy">
-            This is a generic invitation preview. It contains no private client
-            details and does not grant access to an offer.
-          </p>
-        </div>
-        <div class="invitation-card">
-          <p class="eyebrow">YOUR FIRST 30 DAYS</p>
-          <p class="price">300 <span>TND</span></p>
-          <p><strong>250 companion replies</strong> on WhatsApp</p>
-          <p class="small-copy">
-            The proposed Practice plan is 600 TND/month. Your first month is 300
-            TND. No automatic renewal or move to a higher price.
-          </p>
-          <CheckoutPreview
-            offer={invitation}
-            label="Explore your first month"
-            featured
-          />
-          <p class="small-copy">
-            Continue, change your plan, or stop. Your choice.
-          </p>
-        </div>
-      </div>
-    </section>
-  {/if}
-
   <section
     id="plans"
     class="section wrap plans-section"
@@ -462,6 +416,13 @@
             <li>A dedicated WhatsApp conversation</li>
             <li>No automatic overage charges</li>
           </ul>
+          <div class="personal-notes">
+            <strong>Personal notes from Fatma</strong>
+            <p>
+              Occasional text or voice notes when I am able, with no fixed
+              schedule or promised response time during maternity leave.
+            </p>
+          </div>
           <CheckoutPreview
             offer={plan}
             label={"Explore " + plan.name}
@@ -471,8 +432,8 @@
     </div>
     <div class="plan-notes">
       <p>
-        Personal notes from me when I am able, with no promised cadence or
-        response time. Live coaching sessions are separate.
+        Personal notes are available on the same basis across all three plans.
+        Live coaching sessions are separate.
       </p>
       <p>
         Proposed pilot prices and allowances, to be confirmed before payment.
@@ -484,19 +445,6 @@
         >Payment preview · Card in USD or EUR · Bank transfer by invoice</span
       >
     </div>
-    {#if !invited}<div class="loyalty-note">
-        <span class="little-sun" aria-hidden="true">✳</span>
-        <div>
-          <strong>Already working with me?</strong>
-          <p>
-            There is a gentler first step: the Practice allowance for 300 TND
-            for your first month.
-          </p>
-        </div>
-        <a class="text-link" href="/coaching-companion/invitation"
-          >See the invitation preview <span aria-hidden="true">↗</span></a
-        >
-      </div>{/if}
   </section>
 
   <section class="human-section section" aria-labelledby="human-title">
@@ -525,10 +473,8 @@
         <div class="session-line">
           <span>One session</span><strong>750 TND</strong>
         </div>
-        <details>
-          <summary
-            >Explore session bundles <span aria-hidden="true">+</span></summary
-          >
+        <div class="session-bundles">
+          <h4>Session bundles</h4>
           <dl>
             <div>
               <dt>3 sessions <small>700 TND each</small></dt>
@@ -543,16 +489,13 @@
               <dd>7,200 TND</dd>
             </div>
           </dl>
-        </details>
+        </div>
         <p class="small-copy">
           Proposed future pricing. Session length, booking and cancellation
           terms will be confirmed when appointments reopen. Companion
           subscription separate.
         </p>
-        {#if invited}<p class="relationship-rate">
-            For this existing-client pilot, the proposed relationship rate
-            remains 600 TND per session when we resume. No bundle required.
-          </p>{/if}<a
+        <a
           class="text-link"
           href="mailto:fatma@cooncircles.com?subject=Coaching%20when%20sessions%20reopen"
           >Ask about future availability <span aria-hidden="true">↗</span></a
@@ -591,15 +534,80 @@
         Bring what is alive. Start with one question.<br />See whether this
         space helps you hear yourself more clearly.
       </p>
-      <a class="button primary" href={invited ? "#invitation" : "#plans"}
-        >{invited ? "Return to your invitation" : "Find your rhythm"}
+      <a class="button primary" href="#plans"
+        >Find your rhythm
         <span aria-hidden="true">↗</span></a
       ><span class="sign-off">With care, Fatma</span>
+      <span class="profile-photo closing-photo"
+        ><img
+          src="/hero-fatma.webp"
+          alt="Fatma Ghedira"
+          width="128"
+          height="128"
+          loading="lazy"
+        /></span
+      >
     </div>
   </section>
 </div>
 
 <style>
+  .fatma-note {
+    margin: 0;
+  }
+  .fatma-note blockquote {
+    border-left: 2px solid #a58c67;
+    padding-left: 22px;
+  }
+  .profile-photo {
+    display: block;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(2.1);
+    transform-origin: 60% 46%;
+  }
+  .closing-photo {
+    width: 128px;
+    height: 128px;
+    margin: 24px auto 0;
+    border: 3px solid #f8f2e8;
+  }
+  .personal-notes {
+    border-top: 1px solid #c5bea9;
+    padding-top: 20px;
+    margin-bottom: 24px;
+  }
+  .personal-notes strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .personal-notes p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--ink);
+  }
+  .plan-top .eyebrow {
+    font-size: 14px;
+  }
+  .session-bundles h4 {
+    font-family: Rubik, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 24px 0 20px;
+  }
+  .session-card .small-copy {
+    font-size: 13px !important;
+  }
   .companion-page {
     --ink: #55452f;
     --soft-ink: #70624d;
@@ -630,7 +638,7 @@
   }
   .hero {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: minmax(0, 1.2fr) 360px;
     align-items: center;
     gap: 56px;
     padding-block: 80px 86px;
@@ -670,14 +678,14 @@
     color: #8b5b43;
   }
   .hero-intro {
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.7;
     margin-bottom: 12px;
   }
   .hero-body {
     max-width: 475px;
-    font-size: 14px;
-    line-height: 1.85;
+    font-size: 17px;
+    line-height: 1.8;
     color: var(--soft-ink);
   }
   .hero-actions {
@@ -718,28 +726,24 @@
   .signature {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
+
+    margin-top: 24px;
   }
   .signature img {
-    width: 45px;
-    height: 45px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
     object-position: 50% 48%;
   }
   .signature span {
     display: block;
-    font-size: 12px;
-  }
-  .signature small {
-    display: block;
-    font-size: 10px;
-    margin-top: 4px;
-    color: var(--soft-ink);
+    font-size: 17px;
   }
   .hero-footnote {
     margin-top: 16px;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1.7;
     color: var(--soft-ink);
   }
@@ -747,7 +751,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    padding: 0 8px;
+    padding: 0;
     isolation: isolate;
   }
   .orbit {
@@ -1061,7 +1065,7 @@
     margin: 0;
   }
   .recommendation {
-    font-size: 9px;
+    font-size: 11px;
     background: #d5ddc7;
     padding: 5px 8px;
     border-radius: 20px;
@@ -1069,11 +1073,11 @@
     color: #4f603e;
   }
   .plan-description {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.8;
     color: var(--soft-ink);
     margin-top: 20px;
-    min-height: 44px;
+    min-height: 58px;
   }
   .price {
     font:
@@ -1087,23 +1091,25 @@
       12px Rubik,
       sans-serif;
     letter-spacing: 0;
+
+    font-size: 16px;
   }
   .price small {
-    font-size: 10px;
+    font-size: 14px;
     color: var(--soft-ink);
   }
   .allowance {
     border-block: 1px solid #d4cbbb;
     padding-block: 17px;
-    font-size: 11px;
+    font-size: 15px;
   }
   .allowance strong {
-    font-size: 17px;
+    font-size: 23px;
     font-weight: 500;
     margin-right: 4px;
   }
   .rhythm {
-    font-size: 11px;
+    font-size: 15px;
     color: var(--soft-ink);
     margin: 16px 0 8px;
   }
@@ -1114,7 +1120,7 @@
     flex: 1;
   }
   .plan li {
-    font-size: 11px;
+    font-size: 15px;
     line-height: 1.7;
     margin-bottom: 12px;
     padding-left: 19px;
@@ -1132,7 +1138,7 @@
     margin: 24px auto 0;
   }
   .plan-notes p {
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.8;
     margin: 8px 0;
     color: var(--soft-ink);
@@ -1144,34 +1150,8 @@
   .plan-notes > span {
     display: block;
     margin-top: 22px;
-    font-size: 10px;
+    font-size: 13px;
     color: var(--soft-ink);
-  }
-  .loyalty-note {
-    display: flex;
-    gap: 22px;
-    align-items: center;
-    margin-top: 45px;
-    padding: 24px 0 0;
-    border-top: 1px solid var(--line);
-  }
-  .little-sun {
-    font-size: 32px;
-    color: #9c7753;
-  }
-  .loyalty-note strong {
-    font-size: 12px;
-    font-weight: 500;
-  }
-  .loyalty-note p {
-    font-size: 11px;
-    color: var(--soft-ink);
-    line-height: 1.8;
-    margin-top: 6px;
-  }
-  .loyalty-note > a {
-    margin-left: auto;
-    flex-shrink: 0;
   }
   .human-section {
     background: #eaeade;
@@ -1212,22 +1192,18 @@
     display: flex;
     justify-content: space-between;
     gap: 14px;
-    font-size: 13px;
+    font-size: 17px;
     border-bottom: 1px solid var(--line);
     padding-bottom: 20px;
   }
   .session-line strong {
     font-weight: 500;
   }
-  .session-card summary {
-    justify-content: space-between;
-    font-size: 12px;
-  }
   .session-card dl > div {
     display: flex;
     justify-content: space-between;
     gap: 12px;
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
   .session-card dt small {
@@ -1240,14 +1216,6 @@
   }
   .session-card > .text-link {
     margin-top: 10px;
-  }
-  .relationship-rate {
-    padding: 12px;
-    background: #e4e9d8;
-    font-size: 11px;
-    line-height: 1.8;
-    border-radius: 5px;
-    margin-top: 15px;
   }
   .faq {
     display: grid;
@@ -1278,39 +1246,6 @@
     margin-top: 28px;
     color: #896347;
   }
-  .invitation-kicker {
-    font:
-      italic 20px Fraunces,
-      serif;
-    color: #8b5b43;
-    margin-bottom: 18px;
-  }
-  .invitation-section {
-    background: #e5e9d9;
-    border-block: 1px solid #c9ceb9;
-    padding: 70px 0;
-  }
-  .invitation-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 100px;
-    align-items: center;
-  }
-  .invitation-grid p:not(.eyebrow):not(.price) {
-    font-size: 13px;
-    line-height: 1.9;
-    margin-bottom: 18px;
-  }
-  .invitation-card {
-    border: 1px solid #acb69b;
-    border-radius: 12px;
-    padding: 32px;
-    background: #f8f7ed;
-  }
-  .invitation-card > .small-copy:last-child {
-    text-align: center;
-    margin: 15px 0 0;
-  }
   :global(.companion-page a:focus-visible),
   summary:focus-visible,
   .comparison-table:focus-visible {
@@ -1335,9 +1270,6 @@
     .human-grid,
     .theory,
     .faq,
-    .invitation-grid {
-      gap: 45px;
-    }
     .plan {
       padding: 22px 18px;
     }
@@ -1354,6 +1286,16 @@
     }
     .steps h3 {
       font-size: 19px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .hero-copy {
+      max-width: 580px;
+      margin-inline: auto;
     }
   }
   @media (max-width: 767px) {
@@ -1376,13 +1318,13 @@
       font-size: 45px;
     }
     .hero-intro {
-      font-size: 16px;
+      font-size: 20px;
     }
     .hero-visual {
       max-width: 410px;
       width: 100%;
       margin-inline: auto;
-      padding: 0 12px;
+      padding: 0;
     }
     .orbit {
       width: 400px;
@@ -1393,7 +1335,9 @@
       height: 320px;
     }
     .hero-body {
-      font-size: 13px;
+      font-size: 17px;
+
+      line-height: 1.8;
     }
     .preview-ribbon {
       font-size: 10px;
@@ -1425,10 +1369,6 @@
     .theory,
     .human-grid,
     .faq,
-    .invitation-grid {
-      grid-template-columns: 1fr;
-      gap: 38px;
-    }
     .relationship {
       padding-block: 55px;
     }
@@ -1515,35 +1455,24 @@
       flex-wrap: nowrap;
     }
     .plan-description {
-      min-height: unset;
+      min-height: 58px;
+
+      font-size: 16px;
     }
     .price {
       font-size: 52px;
     }
     .plan li {
-      font-size: 12px;
+      font-size: 15px;
     }
     .plan-notes {
       margin-top: 22px;
-    }
-    .loyalty-note {
-      flex-wrap: wrap;
-      gap: 12px 18px;
-    }
-    .loyalty-note > div {
-      flex: 1;
-    }
-    .loyalty-note > a {
-      margin-left: 0;
     }
     .session-card {
       padding: 25px;
     }
     .closing {
       padding-block: 65px;
-    }
-    .invitation-section {
-      padding-block: 55px;
     }
   }
   @media (max-width: 380px) {

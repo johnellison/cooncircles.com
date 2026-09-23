@@ -31,15 +31,5 @@ export const plans = [
   },
 ] as const;
 
-// Illustrative foreign-currency amounts only. No provider or live prices are connected.
-export const invitation = {
-  id: "invitation",
-  name: "Your first month",
-  price: 300,
-  replies: 250,
-  description: "The Practice allowance, at the Reflect price, for 30 days.",
-  rhythm: "A gentle place to begin.",
-  usd: 102,
-  eur: 93,
-} as const;
-export type CompanionOffer = (typeof plans)[number] | typeof invitation;
+// Foreign-currency amounts are illustrative only; no live checkout is connected.
+export type CompanionOffer = (typeof plans)[number];
