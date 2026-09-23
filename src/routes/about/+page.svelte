@@ -135,9 +135,7 @@
 		</div>
 
 		<div class="mt-16">
-			<Button variant="default" size="lg" asChild>
-				<a href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</a>
-			</Button>
+			<Button variant="default" size="lg" href="https://calendly.com/fatma-ghedira/30min">Book a discovery call</Button>
 		</div>
 	</div>
 </section>

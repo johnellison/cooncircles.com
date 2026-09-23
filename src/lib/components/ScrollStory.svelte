@@ -22,7 +22,7 @@
 	let containerHeight = $state(0);
 	let windowHeight = $state(0);
 	let scrollY = $state(0);
-	let mounted = $state(0);
+	let mounted = $state(false);
 
 	// Check for reduced motion preference
 	const prefersReducedMotion = typeof window !== 'undefined'
